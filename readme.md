@@ -3,7 +3,7 @@
 
 ## Install
 ```
-WIP
+npm install --save-dev electron-positioner
 ```
 
 ## Usage
