@@ -29,7 +29,7 @@ module.exports = function positioner (position, browserWindow, trayPosition) {
       y: screenSize.y
     },
     topRight: {
-      x: Math.floor(screenSize.width - windowSize[0]),
+      x: Math.floor(screenSize.x + (screenSize.width - windowSize[0])),
       y: screenSize.y
     },
     bottomLeft: {
@@ -37,19 +37,19 @@ module.exports = function positioner (position, browserWindow, trayPosition) {
       y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
     },
     bottomRight: {
-      x: Math.floor(screenSize.width - windowSize[0]),
+      x: Math.floor(screenSize.x + (screenSize.width - windowSize[0])),
       y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
     },
     topCenter: {
-      x: Math.floor((screenSize.width / 2) - (windowSize[0] / 2)),
+      x: Math.floor(screenSize.x + ((screenSize.width / 2) - (windowSize[0] / 2))),
       y: screenSize.y
     },
     bottomCenter: {
-      x: Math.floor((screenSize.width / 2) - (windowSize[0] / 2)),
+      x: Math.floor(screenSize.x + ((screenSize.width / 2) - (windowSize[0] / 2))),
       y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
     },
     center: {
-      x: Math.floor((screenSize.width / 2) - (windowSize[0] / 2)),
+      x: Math.floor(screenSize.x + ((screenSize.width / 2) - (windowSize[0] / 2))),
       y: Math.floor(((screenSize.height + screenSize.y) / 2) - (windowSize[1] / 2))
     }
   }
