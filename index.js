@@ -1,5 +1,4 @@
 module.exports = function position (position, browserWindow, trayPosition) {
-
   var electronScreen = require('screen')
 
   // Get window size
