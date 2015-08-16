@@ -40,6 +40,18 @@ module.exports = function position (position, browserWindow, trayPosition, setPo
     bottomRight: {
       x: Math.floor(screenSize.width - windowSize[0]),
       y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
+    },
+    topCenter: {
+      x: Math.floor((screenSize.width / 2) - (windowSize[0] / 2)),
+      y: screenSize.y
+    },
+    bottomCenter: {
+      x: Math.floor((screenSize.width / 2) - (windowSize[0] / 2)),
+      y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
+    },
+    center: {
+      x: Math.floor((screenSize.width / 2) - (windowSize[0] / 2)),
+      y: Math.floor(((screenSize.height + screenSize.y) / 2) - (windowSize[1] / 2))
     }
   }
 
