@@ -4,10 +4,10 @@ module.exports = function position (position, browserWindow, trayPosition) {
   // Get window size
   var windowSize = (typeof browserWindow.getSize === 'function') ? browserWindow.getSize() : browserWindow
 
-  // When positioning the window under the tray we should use:
+  // When positioning the window under the tray
   var trayScreenSize = electronScreen.getDisplayNearestPoint(trayPosition).workArea
 
-  // When its not under the tray we should use:
+  // When it's not under the tray
   var screenSize = electronScreen.getDisplayNearestPoint(electronScreen.getCursorScreenPoint()).workArea
 
   // Positions
