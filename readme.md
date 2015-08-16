@@ -25,6 +25,35 @@ positioner('trayCenter', [200, 200], trayBounds)
 
 ## Docs
 
+#### positioner(position, browserWindow, trayBounds)
+
+##### position
+A string telling where to place the window.
+Allowed values:
+- `trayLeft`
+- `trayRight`
+- `trayCenter`
+- `topLeft`
+- `topRight`
+- `bottomLeft`
+- `bottomRight`
+- `topCenter`
+- `bottomCenter`
+- `center`
+
+##### browserWindow
+The (browser-window)[https://github.com/atom/electron/blob/master/docs/api/browser-window.md] instance.
+Could also be an array containing your windows width and height `[width, height]`.
+
+If `browser-window` instance is used then `positioner` will set the position of the window with `browserWindow.setPosition()`.
+If you just passing an array, `{x,y}` will be returned.
+
+##### trayBounds
+Tray bounds, only needed for the following positions:
+- `trayLeft`
+- `trayRight`
+- `trayCenter`
+
 ## Tests
 ```
 npm test
