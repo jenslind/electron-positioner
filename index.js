@@ -1,7 +1,15 @@
 module.exports = function position (position, browserWindow, trayPosition, setPosition) {
 
+  var electronScreen = require('screen')
+
   // Get window size
   var windowSize = (typeof browserWindow.getSize === 'function') ? browserWindow.getSize() : browserWindow
+
+  // When positioning the window under the tray we should use:
+  var trayScreenSize = electronScreen.getDisplayNearestPoint(trayPosition).workArea
+
+  // When its not under the tray we should use:
+  var screenSize = electronScreen.getDisplayNearestPoint(electronScreen.getCursorScreenPoint()).workArea
 
   // Positions
   var positions = {
@@ -16,6 +24,22 @@ module.exports = function position (position, browserWindow, trayPosition, setPo
     trayCenter: {
       x: Math.floor(trayPosition.x - ((windowSize[0] / 2)) + (trayPosition.width / 2)),
       y: 0
+    },
+    topLeft: {
+      x: screenSize.x,
+      y: screenSize.y
+    },
+    topRight: {
+      x: Math.floor(screenSize.width - windowSize[0]),
+      y: screenSize.y
+    },
+    bottomLeft: {
+      x: screenSize.x,
+      y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
+    },
+    bottomRight: {
+      x: Math.floor(screenSize.width - windowSize[0]),
+      y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
     }
   }
 
