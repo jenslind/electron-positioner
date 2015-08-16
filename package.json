@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jenslind/electron-positioner.git"
   },
-  "author": "",
+  "author": "Jens Lind <jens@jensl.se> (jenslind.org)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jenslind/electron-positioner/issues"
   },
-  "homepage": "https://github.com/jenslind/electron-positioner"
+  "homepage": "https://github.com/jenslind/electron-positioner",
+  "devDependencies": {
+    "standard": "^5.1.0"
+  }
 }
