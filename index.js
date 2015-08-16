@@ -1,4 +1,4 @@
-module.exports = function position (position, browserWindow, trayPosition) {
+module.exports = function positioner (position, browserWindow, trayPosition) {
   var electronScreen = require('screen')
 
   // Get window size
