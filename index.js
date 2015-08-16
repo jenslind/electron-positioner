@@ -1,4 +1,4 @@
-module.exports = function position (position, browserWindow, trayPosition) {
+module.exports = function position (position, browserWindow, trayPosition, setPosition) {
 
   // Get window size
   var windowSize = (typeof browserWindow.getSize === 'function') ? browserWindow.getSize() : browserWindow
@@ -17,6 +17,12 @@ module.exports = function position (position, browserWindow, trayPosition) {
       x: Math.floor(trayPosition.x - ((windowSize[0] / 2)) + (trayPosition.width / 2)),
       y: 0
     }
+  }
+
+  // Set the windows position or just return x,y
+  if (setPosition && (typeof browserWindow.setPosition === 'function')) {
+    browserWindow.setPosition(positions[position].x, positions[position].y)
+    return
   }
 
   return {
