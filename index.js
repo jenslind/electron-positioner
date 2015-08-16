@@ -1,11 +1,7 @@
 module.exports = function position (position, browserWindow, trayPosition) {
 
-  var windowSize
-  if (typeof browserWindow.getSize === 'function') {
-    windowSize = browserWindow.getSize()
-  } else {
-    windowSize = browserWindow
-  }
+  // Get window size
+  var windowSize = (typeof browserWindow.getSize === 'function') ? browserWindow.getSize() : browserWindow
 
   // Positions
   var positions = {
