@@ -1,4 +1,4 @@
-# [WIP] Electron-positioner [![Build Status](https://travis-ci.org/jenslind/electron-positioner.svg?branch=master)](https://travis-ci.org/jenslind/electron-positioner) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# Electron-positioner [![Build Status](https://travis-ci.org/jenslind/electron-positioner.svg?branch=master)](https://travis-ci.org/jenslind/electron-positioner) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 > Helps positioning your electron windows.
 
 ## Install
