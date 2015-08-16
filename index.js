@@ -1,4 +1,4 @@
-module.exports = function position (position, browserWindow, trayPosition, setPosition) {
+module.exports = function position (position, browserWindow, trayPosition) {
 
   var electronScreen = require('screen')
 
@@ -56,7 +56,7 @@ module.exports = function position (position, browserWindow, trayPosition, setPo
   }
 
   // Set the windows position or just return x,y
-  if (setPosition && (typeof browserWindow.setPosition === 'function')) {
+  if (typeof browserWindow.setPosition === 'function') {
     browserWindow.setPosition(positions[position].x, positions[position].y)
     return
   }
