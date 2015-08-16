@@ -17,11 +17,10 @@ positioner('topRight', browserWindow)
 // Returns: `{x,y}`
 positioner('trayCenter', [200, 200], trayBounds)
 
-// Only these positions requires `trayBounds`:
+// Note, only these positions requires `trayBounds`:
 // `trayLeft`
 // `trayRight`
 // `trayCenter`
-positioner('topRight', browserWindow)
 ```
 
 ## Docs
