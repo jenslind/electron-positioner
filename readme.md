@@ -42,7 +42,7 @@ Allowed values:
 - `center`
 
 ##### browserWindow
-The (browser-window)[https://github.com/atom/electron/blob/master/docs/api/browser-window.md] instance.
+The [browser-window](https://github.com/atom/electron/blob/master/docs/api/browser-window.md) instance.
 Could also be an array containing your windows width and height `[width, height]`.
 
 If `browser-window` instance is used then `positioner` will set the position of the window with `browserWindow.setPosition()`.
