@@ -13,13 +13,25 @@ module.exports = function positioner (position, browserWindow, trayPosition) {
       x: Math.floor(trayPosition.x),
       y: 0
     },
+    trayBottomLeft: {
+      x: Math.floor(trayPosition.x),
+      y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
+    },
     trayRight: {
       x: Math.floor(trayPosition.x - (windowSize[0]) + trayPosition.width),
       y: 0
     },
+    trayBottomRight: {
+      x: Math.floor(trayPosition.x - (windowSize[0]) + trayPosition.width),
+      y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
+    },
     trayCenter: {
       x: Math.floor(trayPosition.x - ((windowSize[0] / 2)) + (trayPosition.width / 2)),
       y: 0
+    },
+    trayBottomCenter: {
+      x: Math.floor(trayPosition.x - ((windowSize[0] / 2)) + (trayPosition.width / 2)),
+      y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
     },
     topLeft: {
       x: screenSize.x,
