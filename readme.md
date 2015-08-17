@@ -17,10 +17,7 @@ positioner('topRight', browserWindow)
 // Returns: `{x,y}`
 positioner('trayCenter', [200, 200], trayBounds)
 
-// Note, only these positions requires `trayBounds`:
-// `trayLeft`
-// `trayRight`
-// `trayCenter`
+// Note, `trayBounds` is only required with the positions that starts with `tray`.
 ```
 
 ## Docs
@@ -31,8 +28,11 @@ positioner('trayCenter', [200, 200], trayBounds)
 A string telling where to place the window.
 Allowed values:
 - `trayLeft`
+- `trayBottomLeft`
 - `trayRight`
+- `trayBottomRight`
 - `trayCenter`
+- `trayBottomCenter`
 - `topLeft`
 - `topRight`
 - `bottomLeft`
@@ -51,8 +51,11 @@ If you just passing an array, `{x,y}` will be returned.
 ##### trayBounds
 Tray bounds, only needed for the following positions:
 - `trayLeft`
+- `trayBottomLeft`
 - `trayRight`
+- `trayBottomRight`
 - `trayCenter`
+- `trayBottomCenter`
 
 ## Tests
 ```
