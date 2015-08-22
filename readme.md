@@ -8,21 +8,31 @@ npm install --save-dev electron-positioner
 
 ## Usage
 ```Javascript
-var positioner = require('electron-positioner')
+var Positioner = require('electron-positioner')
+var positioner = new Positioner(browserWindow)
 
-// Position the window top right on the screen.
-positioner('topRight', browserWindow)
+// Moves the window top right on the screen.
+positioner.move('topRight')
 
-// You can also pass an array `[width, height]` instead of the `browser-window`.
-// Returns: `{x,y}`
-positioner('trayCenter', [200, 200], trayBounds)
+// Returns `{x,y}`
+positioner.calculate('trayCenter', trayBounds)
 
 // Note, `trayBounds` is only required with the positions that starts with `tray`.
 ```
 
 ## Docs
 
-#### positioner(position, browserWindow, trayBounds)
+#### new Positioner (browserWindow)
+Constructor
+
+##### browserWindow
+The [browser-window](https://github.com/atom/electron/blob/master/docs/api/browser-window.md) instance.
+
+#### calculate (position, trayBounds)
+Returns coordinates `{x,y}`.
+
+#### move (position, trayBounds)
+Moves the window with `browserWindow.setPosition()`
 
 ##### position
 A string telling where to place the window.
@@ -40,13 +50,6 @@ Allowed values:
 - `topCenter`
 - `bottomCenter`
 - `center`
-
-##### browserWindow
-The [browser-window](https://github.com/atom/electron/blob/master/docs/api/browser-window.md) instance.
-Could also be an array containing your windows width and height `[width, height]`.
-
-If `browser-window` instance is used then `positioner` will set the position of the window with `browserWindow.setPosition()`.
-If you just passing an array, `{x,y}` will be returned.
 
 ##### trayBounds
 Tray bounds, only needed for the following positions:
