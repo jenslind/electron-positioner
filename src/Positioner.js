@@ -16,7 +16,7 @@ export default class Positioner {
     let positions = {
       trayLeft: {
         x: Math.floor(trayPosition.x),
-        y: 0
+        y: screenSize.y
       },
       trayBottomLeft: {
         x: Math.floor(trayPosition.x),
@@ -24,7 +24,7 @@ export default class Positioner {
       },
       trayRight: {
         x: Math.floor(trayPosition.x - (windowSize[0]) + trayPosition.width),
-        y: 0
+        y: screenSize.y
       },
       trayBottomRight: {
         x: Math.floor(trayPosition.x - (windowSize[0]) + trayPosition.width),
@@ -32,7 +32,7 @@ export default class Positioner {
       },
       trayCenter: {
         x: Math.floor(trayPosition.x - ((windowSize[0] / 2)) + (trayPosition.width / 2)),
-        y: 0
+        y: screenSize.y
       },
       trayBottomCenter: {
         x: Math.floor(trayPosition.x - ((windowSize[0] / 2)) + (trayPosition.width / 2)),
