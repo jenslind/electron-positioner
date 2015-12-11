@@ -71,7 +71,7 @@ export default class Positioner {
     // Default to right if the window is bigger than the space left.
     // Because on Windows the window might get out of bounds and dissappear.
     if (position.substr(0, 4) === 'tray') {
-      if ((positions[position].x + windowSize[0]) > screenSize.width) {
+      if ((positions[position].x + windowSize[0]) > (screenSize.width + screenSize.x)) {
         return {
           x: positions['topRight'].x,
           y: positions[position].y
