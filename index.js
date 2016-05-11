@@ -13,7 +13,7 @@ var Positioner = (function () {
     _classCallCheck(this, Positioner);
 
     this.browserWindow = browserWindow;
-    this.electronScreen = require('screen');
+    this.electronScreen = require('electron').screen;
   }
 
   _createClass(Positioner, [{
