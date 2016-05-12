@@ -3,7 +3,7 @@
 export default class Positioner {
   constructor (browserWindow) {
     this.browserWindow = browserWindow
-    this.electronScreen = require('screen')
+    this.electronScreen = require('electron').screen
   }
 
   _getCoords (position, trayPosition) {
