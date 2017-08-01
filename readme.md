@@ -16,23 +16,24 @@ positioner.move('topRight')
 
 // Returns `{x,y}`
 positioner.calculate('trayCenter', trayBounds)
-
-// Note, `trayBounds` is only required with the positions that starts with `tray`.
 ```
+
+Note, `trayBounds` is only required with the positions that starts with `tray`.
+
 
 ## Docs
 
 #### new Positioner (browserWindow)
 Constructor
 
-##### browserWindow
-The [browser-window](https://github.com/atom/electron/blob/master/docs/api/browser-window.md) instance.
+##### BrowserWindow
+The [BrowserWindow](https://github.com/atom/electron/blob/master/docs/api/browser-window.md) instance.
 
 #### calculate (position, trayBounds)
 Returns coordinates `{x,y}`.
 
 #### move (position, trayBounds)
-Moves the window with `browserWindow.setPosition()`
+Moves the window with `BrowserWindow.setPosition()`
 
 ##### position
 A string telling where to place the window.
