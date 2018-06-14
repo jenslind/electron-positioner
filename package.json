@@ -6,7 +6,7 @@
   "scripts": {
     "test": "standard",
     "build": "babel src/Positioner.js -o index.js",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
