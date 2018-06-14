@@ -87,11 +87,11 @@ export default class Positioner {
   }
 
   _getScreenSize (trayPosition) {
-  	if (trayPosition) {
-  		return this.electronScreen.getDisplayMatching(trayPosition).workArea
-  	} else {
-  		return this.electronScreen.getDisplayNearestPoint(this.electronScreen.getCursorScreenPoint()).workArea
-  	}
+    if (trayPosition) {
+      return this.electronScreen.getDisplayMatching(trayPosition).workArea
+    } else {
+      return this.electronScreen.getDisplayNearestPoint(this.electronScreen.getCursorScreenPoint()).workArea
+    }
   }
 
   move (position, trayPos) {
