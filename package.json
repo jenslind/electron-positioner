@@ -1,7 +1,7 @@
 {
   "name": "electron-positioner",
   "version": "3.0.1",
-  "description": "",
+  "description": "Helps positioning your electron windows.",
   "main": "index.js",
   "scripts": {
     "test": "standard",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/jenslind/electron-positioner.git"
   },
-  "author": "Jens Lind <jens@jensl.se> (jenslind.org)",
+  "author": "Jens Lind <jens@jensl.se> (jenslind.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jenslind/electron-positioner/issues"
