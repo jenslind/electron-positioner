@@ -7,7 +7,7 @@ export default class Positioner {
   }
 
   _getCoords (position, trayPosition) {
-    let screenSize = this._getScreenSize()
+    let screenSize = this._getScreenSize(trayPosition)
     let windowSize = this._getWindowSize()
 
     if (trayPosition === undefined) trayPosition = {}
@@ -86,8 +86,12 @@ export default class Positioner {
     return this.browserWindow.getSize()
   }
 
-  _getScreenSize () {
-    return this.electronScreen.getDisplayNearestPoint(this.electronScreen.getCursorScreenPoint()).workArea
+  _getScreenSize (trayPosition) {
+    if (trayPosition) {
+      return this.electronScreen.getDisplayMatching(trayPosition).workArea
+    } else {
+      return this.electronScreen.getDisplayNearestPoint(this.electronScreen.getCursorScreenPoint()).workArea
+    }
   }
 
   move (position, trayPos) {
