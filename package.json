@@ -1,6 +1,6 @@
 {
   "name": "electron-positioner",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Helps positioning your electron windows.",
   "main": "index.js",
   "scripts": {
