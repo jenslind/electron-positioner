@@ -1,6 +1,6 @@
 'use strict'
 
-export default class Positioner {
+module.exports = class Positioner {
   constructor (browserWindow) {
     this.browserWindow = browserWindow
     this.electronScreen = require('electron').screen
