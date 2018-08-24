@@ -50,6 +50,8 @@ Allowed values:
 - `bottomRight`
 - `topCenter`
 - `bottomCenter`
+- `leftCenter`
+- `rightCenter`
 - `center`
 
 ##### trayBounds

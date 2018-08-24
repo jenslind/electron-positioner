@@ -62,6 +62,14 @@ module.exports = class Positioner {
         x: Math.floor(screenSize.x + ((screenSize.width / 2) - (windowSize[0] / 2))),
         y: Math.floor(screenSize.height - (windowSize[1] - screenSize.y))
       },
+      leftCenter: {
+        x: screenSize.x,
+        y: screenSize.y + Math.floor(screenSize.height / 2) - Math.floor(windowSize[1] / 2)
+      },
+      rightCenter: {
+        x: Math.floor(screenSize.x + (screenSize.width - windowSize[0])),
+        y: screenSize.y + Math.floor(screenSize.height / 2) - Math.floor(windowSize[1] / 2)
+      },
       center: {
         x: Math.floor(screenSize.x + ((screenSize.width / 2) - (windowSize[0] / 2))),
         y: Math.floor(((screenSize.height + screenSize.y) / 2) - (windowSize[1] / 2))
